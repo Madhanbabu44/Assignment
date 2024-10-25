@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <title>Our Services</title>
+  </head>
+  <body
+    class="bg-[url('./Images/Background.png')] bg-center bg-no-repeat bg-cover"
+  >
+    <div id="assignment" class="py-10 px-5 md:px-20">
+      <h1 class="text-3xl font-bold text-left text-white mb-8 font-bahnschrift">
+        OUR SERVICES
+      </h1>
+      <div
+        class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+      >
+        <div
+          class="service-card mt-10 bg-slate-100 rounded-lg shadow-2xl p-6 flex flex-col items-center text-center relative"
+        >
+          <div
+            class="icon-container w-20 h-20 rounded-full bg-white border-4 border-[#000f60] flex items-center justify-center absolute -top-10"
+          >
+            <img
+              src="Images/emergency-call.png"
+              alt="logo"
+              class="icon w-10 h-10 object-cover"
+            />
+          </div>
+          <div class="content mt-10">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+              Emergency Plumbing Services
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Our Plumbers are ready to go 24/7 for emergency - including
+              nights, weekends, and holidays.
+            </p>
+            <a
+              href="#"
+              class="text-[#000f60] font-medium hover:underline cursor-pointer"
+              >Explore this service ></a
+            >
+          </div>
+        </div>
+        <div
+          class="service-card mt-10 bg-slate-100 rounded-lg shadow-2xl p-6 flex flex-col items-center text-center relative"
+        >
+          <div
+            class="icon-container w-20 h-20 rounded-full bg-white border-4 border-[#000f60] flex items-center justify-center absolute -top-10"
+          >
+            <img
+              src="Images/pipe-variant.png"
+              alt="logo"
+              class="icon w-10 h-10 object-cover"
+            />
+          </div>
+          <div class="content mt-10">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+              Plumbing and Drains
+            </h2>
+            <p class="text-gray-600 mb-4">
+              As the largest Plumbing and Drain services company, we make
+              thousands of repairs every day.
+            </p>
+            <a
+              href="#"
+              class="text-[#000f60] font-medium hover:underline cursor-pointer"
+              >Explore this service ></a
+            >
+          </div>
+        </div>
+        <div
+          class="service-card mt-10 bg-slate-100 rounded-lg shadow-2xl p-6 flex flex-col items-center text-center relative"
+        >
+          <div
+            class="icon-container w-20 h-20 rounded-full bg-white border-4 border-[#000f60] flex items-center justify-center absolute -top-10"
+          >
+            <img
+              src="Images/drop.png"
+              alt="logo"
+              class="icon w-10 h-10 object-cover"
+            />
+          </div>
+          <div class="content mt-10">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+              Water Damage
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Our team is equipped with state-of-the-art water extraction and
+              cleanup equipment.
+            </p>
+            <a
+              href="#"
+              class="text-[#000f60] font-medium hover:underline cursor-pointer"
+              >Explore this service ></a
+            >
+          </div>
+        </div>
+        <div
+          class="service-card mt-10 bg-slate-100 rounded-lg shadow-2xl p-6 flex flex-col items-center text-center relative"
+        >
+          <div
+            class="icon-container w-20 h-20 rounded-full bg-white border-4 border-[#000f60] flex items-center justify-center absolute -top-10"
+          >
+            <img
+              src="Images/water-heater.png"
+              alt="logo"
+              class="icon w-10 h-10 object-cover"
+            />
+          </div>
+          <div class="content mt-10">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+              Water Heater
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Trust us for repair and replacement of gas, electric, and tankless
+              water heaters.
+            </p>
+            <a
+              href="#"
+              class="text-[#000f60] font-medium hover:underline cursor-pointer"
+              >Explore this service ></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const serviceCards = document.querySelectorAll(".service-card");
+
+      serviceCards.forEach((card) => {
+        const icon = card.querySelector(".icon");
+        const rotateAnimation = anime({
+          targets: icon,
+          rotate: "1turn",
+          duration: 1000,
+          easing: "easeInOutSine",
+          autoplay: false,
+        });
+        card.addEventListener("mouseenter", () => {
+          rotateAnimation.restart();
+        });
+      });
+    </script>
+  </body>
+</html>
